@@ -2,4 +2,4 @@
 
 Figma link: 
 
-Online: 
+Online: https://omarkandil2003.github.io/Js-Library-Manaer-Brief-7/
