@@ -133,7 +133,8 @@ function EditRow(r){
   document.getElementById("prix").value= ed.cells[2].innerHTML;
   document.getElementById("date").value= ed.cells[3].innerHTML;
   document.getElementById("langue").value=ed.cells[4].innerHTML;
-  document.getElementsByClassName("type").value=ed.cells[5].innerHTML;
+  document.getElementById("email").value=ed.cells[5].innerHTML;
+  document.getElementsByClassName("type").value=ed.cells[6].innerHTML;
     
     r.value = "save"
     document.getElementById("btn").setAttribute("disabled" , "true");
@@ -144,6 +145,7 @@ function EditRow(r){
     ed.cells[2].innerHTML= document.getElementById("prix").value
     ed.cells[3].innerHTML= document.getElementById("date").value
     ed.cells[4].innerHTML= document.getElementById("langue").value
+    ed.cells[5].innerHTML= document.getElementById("email").value
     CellType="";
     for(i=0;i<type.length;i++)
     {
@@ -152,6 +154,8 @@ function EditRow(r){
             CellType=type[i].value;
         }
     }
+
+    
     ed.cells[6].innerHTML= CellType
     alert(CellType)
 
@@ -159,16 +163,22 @@ function EditRow(r){
     r.value = "Edit"
 
     document.getElementById("btn").removeAttribute("disabled");
+    for(var i = 0; i<4;i++){
+        input[i].value = "";
+    }  
+    
    }
 
     }
+
  /////////////////////////////////////DELETE/////////////////////////////////////////////
+
 function deleteRow(r) {
-    var i = r.parentNode.parentNode.rowIndex;
-    confirm("Do you want to delete this ???")
-    if(confirm== true)
+    var xx = r.parentNode.parentNode.rowIndex;
+    
+    if(confirm("Do you want to delete this ???"))
     {
-        table.deleteRow(i);
+        table.deleteRow(xx);  
     }
   
 }
