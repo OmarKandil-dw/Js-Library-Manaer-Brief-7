@@ -10,7 +10,6 @@ var table = document.getElementById("table");
 var type=document.getElementsByClassName("type");
 var email = document.getElementById("email")
 
-
 function validation(e){
     var no_valide=0;
     //////require:
@@ -75,7 +74,6 @@ function validation(e){
 if(no_valide==0)
 {
 
-
     var newRow = table.insertRow(-1);
             cell1 = newRow.insertCell(0);
             cell2 = newRow.insertCell(1);
@@ -94,9 +92,6 @@ if(no_valide==0)
             }
         }
 
-
-
-
         cell1.innerHTML = Titre.value;
         cell2.innerHTML = Auteur.value;
         cell3.innerHTML = Prix.value;
@@ -107,11 +102,6 @@ if(no_valide==0)
         cell8.innerHTML='<input type="button"  value="Edit" onclick="EditRow(this)" class="btn1">'
         + '<input type="button" onclick="deleteRow(this)"  value="Delete" class="btn2">';
 
-
-
-
-
-       
 }
 for(var i = 0; i<4;i++){
     input[i].value = "";
@@ -119,10 +109,7 @@ for(var i = 0; i<4;i++){
 
 }
 document.getElementsByTagName("form")[0].addEventListener('submit', validation);
-
-
-
-  
+ 
 function EditRow(r){
    ed = r.parentNode.parentNode
     
