@@ -8,7 +8,8 @@ var input = document.getElementsByTagName("input");
 var langue=document.getElementById("langue");
 var table = document.getElementById("table");
 var type=document.getElementsByClassName("type");
-var email = document.getElementById("email")
+var email = document.getElementById("email");
+
 
 function validation(e){
     var no_valide=0;
@@ -21,7 +22,6 @@ function validation(e){
             no_valide++;
         }
         else{
-            // input[i].nextElementSibling.innerHTML="valider";
             input[i].style.borderColor="green"
         }
     }     
@@ -59,10 +59,12 @@ function validation(e){
             if(Prix.value>0)
             {
                 msgPrix.innerHTML="valider";
+                input[i].style.borderColor="green";
             }
             else
             {
-                msgPrix.innerHTML="nigatif";
+                msgPrix.innerHTML="négative";
+                input[i].style.borderColor="red";
             }
         }
       
@@ -171,6 +173,5 @@ function deleteRow(r) {
 }
 
 
-  
-    
+
 
